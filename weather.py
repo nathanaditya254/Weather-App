@@ -1,5 +1,4 @@
 import requests
-import math
 import os
 from dotenv import load_dotenv, dotenv_values 
 
@@ -33,7 +32,9 @@ def geo_reverse(lat, lon):
         'appid': api_key
     }
     response = requests.get(geo_reverse_api, params=params)
-    return response.json()
+    r = response.json()
+    city = r[0].get('name')
+    return city
 
 def get_weather(lat, lon):
 # Send request to OpenWeather API
