@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            background-color: rgb(161, 170, 170);
+        }
+    </style>
+  </head>
+  <body>
+    <h2>Weather App</h2>
+    <p>Please enter the coordinates(latitude, longitude) of your city:</p>
+    <br><br>
+    <form onsubmit="handlecoords(); return false;">
+      <input 
+      type="text"
+      id = 'latitude'
+      placeholder="          latitude"
+      style="width: 140px; height: 30px; font-size: 15px;"
+      >
+      <br>Ex. NYC: 40.7127281 <br><br>
+      <input 
+      type="text"
+      id = 'longitude'
+      placeholder="          longitude"
+      style="width: 140px; height: 30px; font-size: 15px;"
+      >
+      <br>Ex. NYC: -74.0060152<br><br>
+      <input 
+      type="submit"
+      value="Submit"
+      style="width: 130px; height: 25px; font-size: 14px;"
+      >
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

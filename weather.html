@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            background-color: rgb(158, 203, 203);
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <h2>Weather in {{ city }}</h2>
+    <p>Weather: {{ weather }}</p>
+    <p>Temperature: {{ temp }}˚F</p>
+    <p>Feels like: {{ feels_like }}˚F</p>
+    <p>Low: {{ temp_min }}˚F</p>
+    <p>High: {{ temp_max }}˚F</p>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+      <a href="{{ url_for('index') }}"
+     style="display: inline-block;
+            font-size: 18px;
+            background-color: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            margin-top: 40px;">
+            ← Back to Home
+  </a>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            background-color: rgb(161, 170, 170);
+        }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome to the Weather App!</h2>
+    <p>Please choose one:</p>
+    <br><br>
+    <form>
+      <input 
+      type="button"
+      id = 'chooseCoords'
+      value="Enter coordinates of city"
+      style="width: 195px; height: 40px; font-size: 17px;"
+      onclick="handleCoords()"
+      >
+      <br><br>
+      <br><br>
+      <input 
+      type="button"
+      id = 'chooseCity'
+      value="Enter name of city"
+      style="width: 195px; height: 40px; font-size: 17px;"
+      onclick="handleCity()"
+      >
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
